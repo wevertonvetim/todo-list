@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Title from '@components/Title';
-import AddItemForm from '@components/AddItemForm';
-import TaskDashboard from '@components/TaskDashboard';
+import Title from './components/Title';
+import AddItemForm from './components/AddItemForm';
+import TaskDashboard from './components/TaskDashboard';
 
 function App() {
   return (
