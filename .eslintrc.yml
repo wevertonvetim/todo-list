@@ -2,8 +2,9 @@ env:
   browser: true
   es2021: true
 extends:
-  - plugin:react/recommended
   - airbnb
+  - 'plugin:@typescript-eslint/recommended'
+  - 'plugin:prettier/recommended'
 parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaFeatures:
@@ -12,5 +13,17 @@ parserOptions:
   sourceType: module
 plugins:
   - react
+  - react-hooks
   - '@typescript-eslint'
-rules: {}
+  - prettier
+  - import
+rules:
+  'react/jsx-filename-extension':
+    - 2
+    - 'extensions': ['.js', '.jsx', '.ts', '.tsx']
+  'jsx-a11y/label-has-associated-control': 0
+settings:
+  'import/resolver':
+    'typescript':
+      'alwaysTryTypes': true
+      'project': './tsconfig.json'

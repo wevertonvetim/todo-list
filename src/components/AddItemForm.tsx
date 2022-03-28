@@ -1,17 +1,19 @@
-import React from "react";
-const AddItemForm = () => {
+import React from 'react';
+
+function AddItemForm() {
+  const domInputId = 'new-todo-input';
   return (
     <form>
       <h2 className="label-wrapper">
-        <label htmlFor="new-todo-input" className="label__lg">
+        <label htmlFor={domInputId} className="label__lg">
           Lista de tarefas PodCodar
         </label>
       </h2>
       <input
         type="text"
-        id="new-todo-input"
+        id={domInputId}
         className="input input__lg"
-        name="text"
+        name={domInputId}
         autoComplete="off"
       />
       <button type="button" className="btn btn__primary btn__lg">
@@ -19,5 +21,5 @@ const AddItemForm = () => {
       </button>
     </form>
   );
-};
+}
 export default AddItemForm;

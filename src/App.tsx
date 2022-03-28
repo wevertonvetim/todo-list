@@ -1,8 +1,9 @@
-import React from "react";
-import "./App.css";
-import Title from "../src/components/Title";
-import AddItemForm from "./components/AddItemForm";
-import TaskDashboard from "./components/TaskDashboard";
+import React from 'react';
+import './App.css';
+import Title from '@components/Title';
+import AddItemForm from '@components/AddItemForm';
+import TaskDashboard from '@components/TaskDashboard';
+
 function App() {
   return (
     <div className="todoapp stack-large">
