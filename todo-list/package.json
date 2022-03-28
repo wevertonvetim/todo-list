@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'teste do danadinho'"
+      "pre-commit": "echo 'testando do danadinho'"
     }
   },
   "private": true,
