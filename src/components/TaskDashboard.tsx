@@ -1,22 +1,22 @@
-import React from "react";
+import React from 'react';
 
-const TaskDashboard = () => {
+function TaskDashboard() {
   return (
     <>
       <div className="filters btn-group stack-exception">
         <button type="button" className="btn toggle-btn">
           <span className="visually-hidden">Show </span>
-          <button>All</button>
+          <button type="button">All</button>
           <span className="visually-hidden"> tasks</span>
         </button>
         <button type="button" className="btn toggle-btn">
           <span className="visually-hidden">Show </span>
-          <button>Active</button>
+          <button type="button">Active</button>
           <span className="visually-hidden"> tasks</span>
         </button>
         <button type="button" className="btn toggle-btn">
           <span className="visually-hidden">Show </span>
-          <button>Complete</button>
+          <button type="button">Complete</button>
           <span className="visually-hidden"> tasks</span>
         </button>
       </div>
@@ -35,15 +35,15 @@ const TaskDashboard = () => {
           <div className="btn-group">
             <button type="button" className="btn">
               save
-              <span className="visually-hidden"></span>
+              <span className="visually-hidden" />
             </button>
             <button type="button" className="btn btn__danger">
-              Delete <span className="visually-hidden"></span>
+              Delete <span className="visually-hidden" />
             </button>
           </div>
         </li>
       </ul>
     </>
   );
-};
+}
 export default TaskDashboard;
