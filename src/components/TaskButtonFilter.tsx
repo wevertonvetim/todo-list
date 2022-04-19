@@ -4,7 +4,7 @@ function TaskButtonFilter() {
   return (
     <button type="button" className="btn toggle-btn">
       <span className="visually-hidden">Show </span>
-      <button type="button">Add task</button>
+      <button type="button">Add tasks</button>
       <span className="visually-hidden"> tasks</span>
     </button>
   );
