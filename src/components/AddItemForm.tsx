@@ -1,22 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function AddItemForm() {
-  const domInputId = 'new-todo-input';
+interface Props {
+  handleAddTask: (task: string) => void;
+}
+
+function AddItemForm({ handleAddTask }: Props) {
+  const [inputValue, setInputValue] = useState<string>('');
+
+  const addTask = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (inputValue !== '') {
+      handleAddTask(inputValue);
+      setInputValue('');
+    }
+  };
+
   return (
-    <form>
+    <form onSubmit={addTask}>
       <h2 className="label-wrapper">
-        <label htmlFor={domInputId} className="label__lg">
-          Lista de tarefas PodCodar
+        <label htmlFor="new-todo-input" className="label__lg">
+          Task list PodCodar
         </label>
       </h2>
       <input
         type="text"
-        id={domInputId}
+        value={inputValue}
+        id="new-todo-input"
         className="input input__lg"
-        name={domInputId}
+        name="new-todo-input"
         autoComplete="off"
+        placeholder="Digite a sua tarefa"
+        onChange={(event) => setInputValue(event.target.value)}
       />
-      <button type="button" className="btn btn__primary btn__lg">
+      <button type="submit" className="btn btn__primary btn__lg">
         Add Task
       </button>
     </form>
